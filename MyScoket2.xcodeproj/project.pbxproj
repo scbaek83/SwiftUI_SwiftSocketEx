@@ -14,6 +14,13 @@
 		02886A682B03C5D5007D59AC /* MyScoket2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02886A672B03C5D5007D59AC /* MyScoket2Tests.swift */; };
 		02886A722B03C5D5007D59AC /* MyScoket2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02886A712B03C5D5007D59AC /* MyScoket2UITests.swift */; };
 		02886A742B03C5D5007D59AC /* MyScoket2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02886A732B03C5D5007D59AC /* MyScoket2UITestsLaunchTests.swift */; };
+		02886A872B03C648007D59AC /* UDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02886A812B03C648007D59AC /* UDPClient.swift */; };
+		02886A882B03C648007D59AC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02886A822B03C648007D59AC /* Result.swift */; };
+		02886A892B03C648007D59AC /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02886A832B03C648007D59AC /* TCPClient.swift */; };
+		02886A8A2B03C648007D59AC /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 02886A842B03C648007D59AC /* ytcpsocket.c */; };
+		02886A8B2B03C648007D59AC /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02886A852B03C648007D59AC /* Socket.swift */; };
+		02886A8C2B03C648007D59AC /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 02886A862B03C648007D59AC /* yudpsocket.c */; };
+		02886A8E2B03C72B007D59AC /* SendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02886A8D2B03C72B007D59AC /* SendButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,14 @@
 		02886A6D2B03C5D5007D59AC /* MyScoket2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyScoket2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02886A712B03C5D5007D59AC /* MyScoket2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScoket2UITests.swift; sourceTree = "<group>"; };
 		02886A732B03C5D5007D59AC /* MyScoket2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScoket2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02886A802B03C648007D59AC /* MyScoket2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyScoket2-Bridging-Header.h"; sourceTree = "<group>"; };
+		02886A812B03C648007D59AC /* UDPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPClient.swift; sourceTree = "<group>"; };
+		02886A822B03C648007D59AC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		02886A832B03C648007D59AC /* TCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPClient.swift; sourceTree = "<group>"; };
+		02886A842B03C648007D59AC /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		02886A852B03C648007D59AC /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		02886A862B03C648007D59AC /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		02886A8D2B03C72B007D59AC /* SendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +111,16 @@
 			children = (
 				02886A562B03C5D4007D59AC /* MyScoket2App.swift */,
 				02886A582B03C5D4007D59AC /* ContentView.swift */,
+				02886A8D2B03C72B007D59AC /* SendButton.swift */,
+				02886A822B03C648007D59AC /* Result.swift */,
+				02886A852B03C648007D59AC /* Socket.swift */,
+				02886A832B03C648007D59AC /* TCPClient.swift */,
+				02886A812B03C648007D59AC /* UDPClient.swift */,
+				02886A842B03C648007D59AC /* ytcpsocket.c */,
+				02886A862B03C648007D59AC /* yudpsocket.c */,
 				02886A5A2B03C5D5007D59AC /* Assets.xcassets */,
 				02886A5C2B03C5D5007D59AC /* Preview Content */,
+				02886A802B03C648007D59AC /* MyScoket2-Bridging-Header.h */,
 			);
 			path = MyScoket2;
 			sourceTree = "<group>";
@@ -195,6 +218,7 @@
 				TargetAttributes = {
 					02886A522B03C5D4007D59AC = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 					02886A622B03C5D5007D59AC = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -257,7 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02886A8C2B03C648007D59AC /* yudpsocket.c in Sources */,
+				02886A872B03C648007D59AC /* UDPClient.swift in Sources */,
+				02886A8B2B03C648007D59AC /* Socket.swift in Sources */,
+				02886A892B03C648007D59AC /* TCPClient.swift in Sources */,
 				02886A592B03C5D4007D59AC /* ContentView.swift in Sources */,
+				02886A882B03C648007D59AC /* Result.swift in Sources */,
+				02886A8E2B03C72B007D59AC /* SendButton.swift in Sources */,
+				02886A8A2B03C648007D59AC /* ytcpsocket.c in Sources */,
 				02886A572B03C5D4007D59AC /* MyScoket2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyScoket2/Preview Content\"";
@@ -438,6 +470,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = scbaek.com.MyScoket2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyScoket2/MyScoket2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyScoket2/Preview Content\"";
@@ -467,6 +502,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = scbaek.com.MyScoket2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyScoket2/MyScoket2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
